@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Emily Davis",
+    "phone": "555-2468",
+    "email": "emily@example.com",
+    "employmentType": "Full-time",
+    "jobTitle": "Project Manager",
+    "activity": "LUNCH"
+  },
+  {
+    "name": "Michael Lee",
+    "phone": "555-3690",
+    "email": "michael@example.com",
+    "employmentType": "Part-time",
+    "jobTitle": "Graphic Designer",
+    "activity": "SICK LEAVE"
+  },
+  {
+    "name": "Sarah Johnson",
+    "phone": "555-7890",
+    "email": "sarah@example.com",
+    "employmentType": "Contractor",
+    "jobTitle": "Data Analyst",
+    "activity": "ACTIVE"
+  },
+  {
+    "name": "David Chen",
+    "phone": "555-4567",
+    "email": "david@example.com",
+    "employmentType": "Full-time",
+    "jobTitle": "Web Developer",
+    "activity": "INACTIVE"
+  },
+  {
+    "name": "Jessica Brown",
+    "phone": "555-8901",
+    "email": "jessica@example.com",
+    "employmentType": "Part-time",
+    "jobTitle": "Marketing Assistant",
+    "activity": "CHILD CARE"
+  },
+  {
+    "name": "Mark Wilson",
+    "phone": "555-2345",
+    "email": "mark@example.com",
+    "employmentType": "Contractor",
+    "jobTitle": "IT Consultant",
+    "activity": "LUNCH"
+  },
+  {
+    "name": "Larry David",
+    "phone": "555-5672",
+    "email": "larry@example.com",
+    "jobTitle": "Writer",
+    "employmentType": "Permanent Contract",
+    "activity": "LUNCH"
+  },
+  {
+    "name": "Spongebob",
+    "phone": "555-0364",
+    "email": "spongebob@example.com",
+    "jobTitle": "Fry cook",
+    "employmentType": "Permanent Contract",
+    "activity": "ACTIVE"
+  }
+]

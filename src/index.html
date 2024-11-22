@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="employee-form" action="/api/employees" method="POST">
+        <div>
+            <label for="full-name">Full name:</label>
+            <input type="text" name="name" required placeholder="John Smith">
+        </div>
+        <br>
+        <div>
+            <label for="phone-number">Phone number:</label>
+            <input type="tel" id="phone-number" name="phone" required placeholder="+1 123 456 7890"  required> </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required placeholder="contact@example.com">
+        </div>
+        <br>
+        <div>
+            <label for="job-position">Job position:</label>
+            <input type="text" name="jobTitle" required placeholder="Programmer">
+        </div>
+        <br>
+        <div>
+            <label for="employmentType">Type of employment</label>
+            <select name="employmentType" required>
+                <option>Permanent Contract</option>
+                <option>Fixed-Term Contract</option>
+                <option>Student</option>
+                <option>Contracted</option>
+                <option>Freelancer</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <br>
+        <div style="display:none">
+            <form id="myForm">
+                <label for="activity">Activity:</label>
+            <select name="activity" id="activity" onchange="toggleCustomInput()">
+                <option>ACTIVE</option>
+                <option>INACTIVE</option>
+            </select>
+
+            <input type="text" id="customInput" class="custom-input" placeholder="Please specify..." />
+            <button type="submit">Submit</button></form>
+        </div>
+        <br>
+        <div>
+            
+        </div>
+        <br>
+    </form>
+    <main>
+        <div id="editModal" style="display:none;">
+            <h2>Edit Employee</h2>
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" />
+            <label for="editPhone">Phone:</label>
+            <input type="text" id="editPhone" />
+            <label for="editEmail">Email:</label>
+            <input type="text" id="editEmail" />
+            <label for="editEmploymentType">Employment Type:</label>
+            <input type="text" id="editEmploymentType" />
+            <label for="editJobTitle">Job Title:</label>
+            <input type="text" id="editJobTitle" />
+            <button id="saveButton">Save</button>
+            <button id="closeModalButton">Close</button>
+          </div>
+                  
+        <div id="data"></div>
+        <div>
+            <label for="type-of-employment">Filter by</label>
+            <select name="Filter by">
+                <option>Active Only</option>
+                <option>All</option>
+                <option>Inactive Only</option>
+            </select>
+        </div>
+        <br>
+        <input type="text" id="searchInput"  style="width: 400px;" placeholder="Search for employees..." onkeyup="filterTable()">
+        <br>
+        <br>
+        <table id="employeeTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Employment Type</th>
+                <th>Job Title</th>
+                <th>Active</th>
+                <th>Edit</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        <br>
+    </div>
+    </div>
+    <div>
+        <h1>Work Time Tracker</h1>
+
+<form id="workForm">
+    <p>Add work hours for worker:</p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="workStart">Work Start:</label>
+    <input type="time" id="workStart" required><br><br>
+
+    <label for="workEnd">Work End:</label>
+    <input type="time" id="workEnd" required><br><br>
+
+    <label for="lunchStart">Lunch Start:</label>
+    <input type="time" id="lunchStart" required><br><br>
+
+    <label for="lunchEnd">Lunch End:</label>
+    <input type="time" id="lunchEnd" required><br><br>
+
+    <label for="workDate">Date:</label>
+  <input type="date" id="workDate" required>
+
+    <button type="submit">Add or edit Entry</button>
+</form>
+
+<div id="timeTable">
+    <h2>Time Entries</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Work Time (hrs)</th>
+                <th>Lunch Time (hrs)</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="entriesBody"></tbody>
+    </table>
+</div>
+    </div>
+    <div>
+    </div>
+    <script src="inputForm.js"></script>
+    <script src="table.js"></script>
+    <script src="spreadsheet.js"></script>
+    <script src="otherOptions.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    </main>
+</body>
+</html>
